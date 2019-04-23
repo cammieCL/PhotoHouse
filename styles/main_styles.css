@@ -353,6 +353,13 @@ section
 	line-height: 1.2;
 }
 
+.listuta{
+	display: none;
+}
+.listuta a: hover{
+	display: block;
+}
+
 /*********************************
 3. Header
 *********************************/
@@ -607,13 +614,65 @@ section
 {
 	fill: #2fce98;
 }
-/********************************************** */
+
+/***********************************************/
+
 /* Modal  */
+.tipscris{
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 30px;
+
+}
+.radiob{
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.butonulmeu{
+	width: 200px;
+	height: 80px;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 25px;
+	background: #2fce98;
+	color: white;
+	border-radius: 10px;
+	text-align: center;
+	border: solid 2px #2fce98;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	cursor: pointer;
+}
+
+.butonulmeu a
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 24px;
+	font-weight: 700;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	line-height: 40px;
+}
+.butonulmeu:hover
+{
+	background: white;
+	color: #2fce98;
+}
+.butonulmeu:hover a
+{
+	color: #2fce98;
+}
 
 .loginscris{
 	align-content: center;
-	font-size: 35px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 30px;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
 }
 .bg-modal{
 	width: 100%;
@@ -650,9 +709,10 @@ section
 	display: block;
 	margin: 20px auto;
 	font-size: 30px;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-family: 'Courier New', Courier, monospace;
 	
 }
+
 .buttonas{
 	width: 100%;
 	height: 100px;
@@ -710,8 +770,95 @@ section
 	align-items: center;
 	justify-content: center;
 }
+.modal-photo{
+	top: 0px;
+	width: 35%;
+	height: 55%;
+	z-index: 99999;
+	opacity: 1; 
+	text-align: center;
+	padding-top: 20px;
+	background: white;
+}
 
+.dropbtn {
+	background-color: #2fce98;
+	background-color: white;
+	color: white;
+	color: black;
+	padding: 16px;
+	font-size: 30px;
+	font-family: 'Courier New', Courier, monospace;
+	cursor: pointer;
+	min-width: 400px;
+	border: 1px solid #2fce98;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 400px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+		border: 1px solid #2fce98;
+		outline: 10px;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-element {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		font-family: 'Courier New', Courier, monospace;
+		font-size: 22px;
+		border: 1px solid #2fce98;
+	}
+	
+  
+  /* Change color of dropdown links on hover */
+ .dropdown-element:hover {background-color: #2fce98;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
 /*********************************
+/* Change the file button */
+.fileContainer {
+    overflow: hidden;
+	position: relative;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 20px;
+	font-weight: bold;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.fileContainer [type=file] {
+    cursor: pointer;
+    display: block;
+	font-size: 999px;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 50px;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+	top: 0;
+}
+
+
+
 4. Menu
 *********************************/
 
@@ -1555,6 +1702,7 @@ section
 {
 	padding-bottom: 37px;
 }
+ 
 .footer_about
 {
 	padding-top: 47px;

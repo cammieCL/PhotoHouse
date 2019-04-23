@@ -1207,16 +1207,26 @@ section
 /*********************************
 7. Footer
 *********************************/
-
+.staijospls
+{
+	position:absolute;
+	bottom:0;
+	height:300px;
+	width:100%;
+	border:1px solid red;
+}
 .footer
 {
 	display: block;
 	width: 100%;
 	background: #f8f8f8;
+	vertical-align: bottom;
+	z-index: 10;
 }
 .footer_content
 {
-	padding-bottom: 37px;
+	padding-bottom: 300px;
+	border: 2px solid blue;
 }
 .footer_about
 {

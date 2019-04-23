@@ -18,6 +18,13 @@
 
 <!-- Menu -->
 
+<?php	
+	session_start();
+	if (!$_SESSION['loggedin']) {
+			header("location: index.php");
+	}
+?> 
+
 <div class="menu">
 
 	<!-- Search -->
@@ -68,7 +75,7 @@
 		<div class="header_overlay"></div>
 		<div class="header_content d-flex flex-row align-items-center justify-content-start">
 			<div class="logo">
-				<a href="#">
+				<a href="indexlogat.php">
 					<div class="d-flex flex-row align-items-center justify-content-start">
 						<div><img src="images/logo_1.gif" alt="" width = "275" height = "95"></div>
 					<!--	<div>PhotoHouse</div> -->
@@ -80,7 +87,7 @@
 				<div>
 					<ul>
 						<li class="active"><a href="#">Explore</a></li>
-						<li><a href="#">Collection</a>
+						<li><a href="collection.php">Collection</a>
 						<!--	<ul>
 								<li><a href="category.html">Travel</a></li>
 								<li><a href="category.html">People</a></li>
@@ -94,8 +101,7 @@
 						</li>
 						<li><a href="category.html">Photographers</a></li>
 						<li><a href="category.html">Categories</a></li>
-						<li><a href="category.html">Inspire</a></li>
-						<li><a href="category.html"></a></li>
+						<li><a href="inspire.php">Inspire</a></li>
 					</ul>
 				</div>
 			</nav> 
@@ -109,18 +115,21 @@
 				</div>
 				<!-- User -->
 				<div class="user">
-					<a href="#"><div><img src="images/user.svg" alt="https://www.flaticon.com/authors/freepik"></div></a>
-					
+				<!--	<a href="#"><div><img src="images/user.svg" alt="https://www.flaticon.com/authors/freepik"></div></a> -->
+					<div class="dropdown">
+						<span>
+							<a href="#"><div><img src="images/user.svg" alt="https://www.flaticon.com/authors/freepik"></div></a>
+						</span>
+						<div class="dropdown-content">
+							<p>Hello World!</p>
+						</div>
+					</div>
 				</div>
 				<!-- Cart -->
-				<div class = "popup" onclick = "mypopup()">
-					<div class="cart"><a href="cart.html"><div><img class="svg" src="images/cart.svg" alt="https://www.flaticon.com/authors/freepik"></div></a></div>
-					<span class = "popuptext" id = "myPopup"> <a href = ""> Log out </a> </span>
-				</div>
+			<!--	<div class="cart"><a href="myphotos.php"><div><img class="svg" src="images/fotografiile_mele.png" alt=""></div></a></div>	-->
 				<!-- Phone -->
-				<div class="header_phone d-flex flex-row align-items-center justify-content-start">
-					<div><div><img src="images/phone.svg" alt="https://www.flaticon.com/authors/freepik"></div></div>
-				</div>
+				<div class = "cart"> <a href = "deconectare.php" id = "log_out"> <div> <img src="images/logout_buton.png" alt="https://www.flaticon.com/authors/freepik"> </div> </a> </div> 
+				<div class = "cart"> <a href = "contact.php"> <div> <img src="images/phone.svg" alt="https://www.flaticon.com/authors/freepik"> </div> </a> </div> 
 			</div>
 		</div>
 	</header>
@@ -148,15 +157,15 @@
 											<div class="home_items">
 												<div class="row">
 													<div class="col-sm-3 offset-lg-1">
-														<div class="home_item_side"><a href="product.html"><img src="images/home1.jpg" alt=""></a></div>
+														<div class="home_item_side"><a href="fashion.php"><img src="images/home1.jpg" alt=""></a></div>
 													</div>
 													<div class="col-lg-4 col-md-6 col-sm-8 offset-sm-2 offset-md-0">
 														<div class="product home_item_large">
-															<div class="product_image"><a href = "product.html"><img src="images/home2.jpg" alt=""> </a></div>
+															<div class="product_image"><a href = "people.php"><img src="images/home2.jpg" alt=""> </a></div>
 														</div>
 													</div>
 													<div class="col-sm-3">
-														<div class="home_item_side"><a href="product.html"><img src="images/home_3.jpg" alt=""></a></div>
+														<div class="home_item_side"><a href="travel.php"><img src="images/home_3.jpg" alt=""></a></div>
 													</div>
 												</div>
 											</div>
@@ -180,15 +189,15 @@
 											<div class="home_items">
 												<div class="row">
 													<div class="col-sm-3 offset-lg-1">
-														<div class="home_item_side"><a href="product.html"><img src="images/home4.jpg" alt=""></a></div>
+														<div class="home_item_side"><a href="nature.php"><img src="images/home4.jpg" alt=""></a></div>
 													</div>
 													<div class="col-lg-4 col-md-6 col-sm-8 offset-sm-2 offset-md-0">
 														<div class="product home_item_large">
-															<div class="product_image"><img src="images/home_5.jpg" alt=""></div>
+														<div class="product_image"><a href = "arhitecture.php"><img src="images/home_5.jpg" alt=""> </a></div>
 														</div>
 													</div>
 													<div class="col-sm-3">
-														<div class="home_item_side"><a href="product.html"><img src="images/home_6.jpg" alt=""></a></div>
+														<div class="home_item_side"><a href="travel.php"><img src="images/home_6.jpg" alt=""></a></div>
 													</div>
 												</div>
 											</div>
@@ -212,15 +221,15 @@
 											<div class="home_items">
 												<div class="row">
 													<div class="col-sm-3 offset-lg-1">
-														<div class="home_item_side"><a href="product.html"><img src="images/home_7.jpg" alt=""></a></div>
+														<div class="home_item_side"><a href="trave;.php"><img src="images/home_7.jpg" alt=""></a></div>
 													</div>
 													<div class="col-lg-4 col-md-6 col-sm-8 offset-sm-2 offset-md-0">
 														<div class="product home_item_large">
-															<div class="product_image"><img src="images/home_8.jpg" alt=""></div>
+														<div class="product_image"><a href = "culture.php"><img src="images/home_8.jpg" alt=""> </a></div>
 														</div>
 													</div>
 													<div class="col-sm-3">
-														<div class="home_item_side"><a href="product.html"><img src="images/home_9.jpg" alt=""></a></div>
+														<div class="home_item_side"><a href="fashion.php"><img src="images/home_9.jpg" alt=""></a></div>
 													</div>
 												</div>
 											</div>
@@ -244,16 +253,15 @@
 											<div class="home_items">
 												<div class="row">
 													<div class="col-sm-3 offset-lg-1">
-														<div class="home_item_side"><a href="product.html"><img src="images/home_10.jpg" alt=""></a></div>
+														<div class="home_item_side"><a href="health.php"><img src="images/home_10.jpg" alt=""></a></div>
 													</div>
 													<div class="col-lg-4 col-md-6 col-sm-8 offset-sm-2 offset-md-0">
 														<div class="product home_item_large">
-															
-															<div class="product_image"><img src="images/home_11.jpg" alt=""></div>
+														<div class="product_image"><a href = "travel.php"><img src="images/home_11.jpg" alt=""> </a></div>
 														</div>
 													</div>
 													<div class="col-sm-3">
-														<div class="home_item_side"><a href="product.html"><img src="images/home_12.jpg" alt=""></a></div>
+														<div class="home_item_side"><a href="nature.php"><img src="images/home_12.jpg" alt=""></a></div>
 													</div>
 												</div>
 											</div>
@@ -299,26 +307,35 @@
 						<div class="section_title text-center">Popular on PhotoHouse </div>
 					</div>
 				</div>
-			<!--	<div class="row page_nav_row">
+				<div class="row page_nav_row">
 					<div class="col">
 						<div class="page_nav">
 							<ul class="d-flex flex-row align-items-start justify-content-center">
-								<li><a href="category.html">Travel</a></li>
-								<li><a href="category.html">People</a></li>
-								<li><a href="category.html">Tehnology</a></li>
-								<li><a href="category.html">Nature</a></li>
-								<li><a href="category.html">Fashion</a></li>
-								<li><a href="category.html">Arhitecture</a></li>
-								<li><a href="category.html">Food </a></li>
-								<li><a href="category.html">Animals </a></li>
-								<li><a href="category.html">Art </a></li>
-								<li><a href="category.html">Business </a></li>
-								<li><a href="category.html">Sports </a></li>
+								<li><a href="travel.php">Travel</a></li>
+								<p style = "font-weight: 700; font-size: 18px"> &nbsp; / &nbsp; </p>
+								<li><a href="people.php">People</a></li>
+								<p style = "font-weight: 700; font-size: 18px"> &nbsp; / &nbsp; </p>
+								<li><a href="tehnology.php">Tehnology </a></li>
+								<p style = "font-weight: 700; font-size: 18px"> &nbsp; / &nbsp; </p>
+								<li><a href="nature.php">Nature</a></li>
+								<p style = "font-weight: 700; font-size: 18px"> &nbsp; / &nbsp; </p>
+								<li><a href="fashion.php">Fashion </a></li>
+								<p style = "font-weight: 700; font-size: 18px"> &nbsp; / &nbsp; </p>
+								<li><a href="arhitecture.php">Arhitecture </a></li>
+								<p style = "font-weight: 700; font-size: 18px"> &nbsp; / &nbsp; </p>
+								<li><a href="food.php">Food </a></li>
+								<p style = "font-weight: 700; font-size: 18px"> &nbsp; / &nbsp; </p>
+								<li><a href="animals.php">Animals </a></li>
+								<p style = "font-weight: 700; font-size: 18px"> &nbsp; / &nbsp; </p>
+								<li><a href="culture.php">Culture </a></li>
+								<p style = "font-weight: 700; font-size: 18px"> &nbsp; / &nbsp; </p>
+								<li><a href="business.php">Business </a></li>
+								<p style = "font-weight: 700; font-size: 18px"> &nbsp; / &nbsp; </p>
+								<li><a href="health.php">Health </a></li>
 							</ul>
 						</div>
 					</div>
-				</div> -->
-				<br> <br> <br>
+				</div> 
 				<div class="row products_row">
 					
 					<!-- Product -->
@@ -329,22 +346,8 @@
 								<div class="product_info d-flex flex-row align-items-start justify-content-start">
 									<div>
 										<div>
-											<div class="product_name"><a href="product.html">Cool Clothing with Brown Stripes</a></div>
-											<div class="product_category">In <a href="category.html">Category</a></div>
-										</div>
-									</div>
-									<div class="ml-auto text-right">
-										<div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="product_price text-right">$3<span>.99</span></div>
-									</div>
-								</div>
-								<div class="product_buttons">
-									<div class="text-right d-flex flex-row align-items-start justify-content-start">
-										<div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><img src="images/heart_2.svg" class="svg" alt=""><div>+</div></div></div>
-										</div>
-										<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><img src="images/cart.svg" class="svg" alt=""><div>+</div></div></div>
+											<div class="product_name"><a href="product.html">Easter is coming</a></div>
+											<div class="product_category">In <a href="category.html">Nature</a></div>
 										</div>
 									</div>
 								</div>
@@ -364,20 +367,6 @@
 											<div class="product_category">In <a href="category.html">Nature</a></div>
 										</div>
 									</div>
-									<div class="ml-auto text-right">
-										<div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="product_price text-right">$3<span>.99</span></div>
-									</div>
-								</div>
-								<div class="product_buttons">
-									<div class="text-right d-flex flex-row align-items-start justify-content-start">
-										<div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><img src="images/heart_2.svg" class="svg" alt=""><div>+</div></div></div>
-										</div>
-										<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><img src="images/cart.svg" class="svg" alt=""><div>+</div></div></div>
-										</div>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -393,20 +382,6 @@
 										<div>
 											<div class="product_name"><a href="product.html">Gaelle Marcel</a></div>
 											<div class="product_category">In <a href="category.html">Food</a></div>
-										</div>
-									</div>
-									<div class="ml-auto text-right">
-										<div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="product_price text-right">$3<span>.99</span></div>
-									</div>
-								</div>
-								<div class="product_buttons">
-									<div class="text-right d-flex flex-row align-items-start justify-content-start">
-										<div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><img src="images/heart_2.svg" class="svg" alt=""><div>+</div></div></div>
-										</div>
-										<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><img src="images/cart.svg" class="svg" alt=""><div>+</div></div></div>
 										</div>
 									</div>
 								</div>
@@ -426,20 +401,6 @@
 											<div class="product_category">In <a href="category.html">Inspire</a></div>
 										</div>
 									</div>
-									<div class="ml-auto text-right">
-										<div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="product_price text-right">$3<span>.99</span></div>
-									</div>
-								</div>
-								<div class="product_buttons">
-									<div class="text-right d-flex flex-row align-items-start justify-content-start">
-										<div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><img src="images/heart_2.svg" class="svg" alt=""><div>+</div></div></div>
-										</div>
-										<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><img src="images/cart.svg" class="svg" alt=""><div>+</div></div></div>
-										</div>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -457,20 +418,6 @@
 											<div class="product_category">In <a href="category.html">Travel</a></div>
 										</div>
 									</div>
-									<div class="ml-auto text-right">
-										<div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="product_price text-right">$3<span>.99</span></div>
-									</div>
-								</div>
-								<div class="product_buttons">
-									<div class="text-right d-flex flex-row align-items-start justify-content-start">
-										<div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><img src="images/heart_2.svg" class="svg" alt=""><div>+</div></div></div>
-										</div>
-										<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><img src="images/cart.svg" class="svg" alt=""><div>+</div></div></div>
-										</div>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -486,20 +433,6 @@
 										<div>
 											<div class="product_name"><a href="product.html">Kyler Boone</a></div>
 											<div class="product_category">In <a href="category.html">Travel</a></div>
-										</div>
-									</div>
-									<div class="ml-auto text-right">
-										<div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="product_price text-right">$3<span>.99</span></div>
-									</div>
-								</div>
-								<div class="product_buttons">
-									<div class="text-right d-flex flex-row align-items-start justify-content-start">
-										<div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><img src="images/heart_2.svg" class="svg" alt=""><div>+</div></div></div>
-										</div>
-										<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><img src="images/cart.svg" class="svg" alt=""><div>+</div></div></div>
 										</div>
 									</div>
 								</div>
@@ -657,19 +590,19 @@
 								<div class="footer_title">Support</div>
 								<ul class="footer_list">
 									<li>
-										<a href="#"><div> Spring in Japan <div class="footer_tag_1">online now</div></div></a>
+										<a href="nature.php"><div> Spring in Japan <div class="footer_tag_1">online now</div></div></a>
 									</li>
 									<li>
-										<a href="#"><div> Easter</div></a>
+										<a href="culture.php"><div> Easter</div></a>
 									</li>
 									<li>
-										<a href="#"> <div> Hour of history</div></a>
+										<a href="arhitecture.php"> <div> Hour of history</div></a>
 									</li>
 									<li>
-										<a href="#"><div> The Grand Canyon's Story <div class="footer_tag_2">recommended</div></div></a>
+										<a href="nature.php"><div> The Grand Canyon's Story <div class="footer_tag_2">recommended</div></div></a>
 									</li>
 									<li>
-										<a href="#"><div> All roads lead home </div></a>
+										<a href="travel.php"><div> All roads lead home </div></a>
 									</li>
 								</ul>
 							</div>
@@ -699,7 +632,6 @@
 							<div class="footer_bar_content d-flex flex-md-row flex-column align-items-center justify-content-start">
 								<nav class="footer_nav ml-md-auto order-md-2 order-1">
 									<ul class="d-flex flex-row align-items-center justify-content-start">
-										<li> <a href="category.html">Payments</a></li>
 										<li> <a href="category.html">Terms of Use</a></li>
 										<li> <a href="category.html">Privacy Policy</a></li>
 										<li> <a href="category.html">Help</a></li>

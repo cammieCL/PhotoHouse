@@ -1,0 +1,190 @@
+.product_image{
+    float: left;
+    margin: 10px;
+}
+.tdd{
+    padding: 10px;
+    border: none;
+}
+.poze{
+    margin: 25px;
+    margin-left: 150px;
+    min-height: 1000px;
+    width: 100%;
+    display: block;
+}
+.poze:: after{
+    content: " ";
+    display: block;
+    clear: both; 
+}
+.titlu_pagina{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+/****************************/
+/*Log In/ Sign up */
+.bg-modal{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	display: flex;
+	z-index: 9999;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+}
+.modal-opac{
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+.modal-content{
+	top: 0px;
+	width: 35%;
+	height: 50%;
+	z-index: 99999;
+	opacity: 1; 
+	text-align: center;
+	padding-top: 20px;
+	background: white;
+}
+.input_form{
+	width: 50%;
+	display: block;
+	margin: 20px auto;
+	font-size: 30px;
+	font-family: 'Courier New', Courier, monospace;
+	
+}
+.buttonas{
+	width: 100%;
+	height: 100px;
+	background-color: #2fce98;
+	justify-content: center;
+	font-family: 'Times New Roman', Times, serif;
+	border-radius: 50%;
+	cursor: pointer;
+
+}
+.modal-img{
+	width: 300px;
+	height: 120px;
+
+}
+.close{
+	position: absolute;
+	top: 0px;
+	right: 14px;
+	font-size: 42px;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+.modal-opac-signup{
+	position: absolute;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+.modal-cont{	
+	top: 0;
+	width: 600px;
+	height: 850px;
+	border-radius: 4px;
+	z-index: 99999;
+	opacity: 1; 
+	text-align: center;
+	padding-top: 70px;	
+	background: white;
+}
+
+.closesign{
+	position: absolute;
+	top: 0px;
+	right: 14px;
+	font-size: 42px;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+.forgotp{
+	font-family: 'Courier New', Courier, monospace;
+	display: block;
+	align-items: center;
+	justify-content: center;
+}
+.modal-photo{
+	top: 0px;
+	width: 35%;
+	height: 55%;
+	z-index: 99999;
+	opacity: 1; 
+	text-align: center;
+	padding-top: 20px;
+	background: white;
+}
+.loginscris{
+	align-content: center;
+	font-size: 30px;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+}
+
+.butonulmeu{
+	width: 200px;
+	height: 80px;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 25px;
+	background: #2fce98;
+	color: white;
+	border-radius: 10px;
+	text-align: center;
+	border: solid 2px #2fce98;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	cursor: pointer;
+}
+
+.butonulmeu a
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 24px;
+	font-weight: 700;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	line-height: 40px;
+}
+.butonulmeu:hover
+{
+	background: white;
+	color: #2fce98;
+}
+.butonulmeu:hover a
+{
+	color: #2fce98;
+}
+.tipscris{
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 30px;
+
+}
+
+.radiob{
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 30px;
+	cursor: pointer;
+}
