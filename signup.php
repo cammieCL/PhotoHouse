@@ -41,6 +41,7 @@
                     else
                         $_SESSION['photo'] = false;
                     $_SESSION['admin'] = $username;
+                    
                     if ($tip == 1)
                        header("location: indexp.php");
                     else

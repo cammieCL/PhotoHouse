@@ -1,15 +1,15 @@
 .product_image{
     float: left;
-    margin: 10px;
+	margin: 30px;
 }
 .tdd{
-    padding: 10px;
+    padding: 20px;
     border: none;
 }
-.poze{
-    margin: 25px;
-    margin-left: 150px;
-    min-height: 1000px;
+.poze {
+	margin: 10px;
+	padding-left: 50px;
+	padding-top: 20px;
     width: 100%;
     display: block;
 }
@@ -24,6 +24,148 @@
     justify-content: center;
     align-items: center;
 }
+
+.containerr:hover .overlayy {
+	opacity: 1;
+  }
+
+  .cartt {
+	font-size: 12px;
+	opacity: 1;
+	letter-spacing: 1px;
+	font-family: 'Lato', sans-serif;
+	transform: translateY(40px);
+	transition: all 0.7s;
+	i {
+	  font-size: 16px;
+	}
+	span {
+	  margin-left: 10px;
+	}
+  }
+
+  .overlayy {
+	width: 100%;
+	height: 100%;
+	border: none;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 2fr 2fr 1fr;
+	
+	background: rgba(77, 77, 77, .4);
+	opacity: 0;
+	transition: all 0.5s; 
+	}
+
+  .containerr {
+	width: 100%;
+	height: 100%;
+	
+	position: absolute;
+	top:0; right: 0; left: 0; bottom: 0;
+	margin: auto;
+	border: none;
+	
+	background-size: cover;
+	cursor: pointer;
+	
+	-webkit-box-shadow: 0 0 5px #000;
+	box-shadow: 0 0 5px #000;
+	}
+
+	.clasa_like{
+		position: relative;
+		box-align: center;
+		width: 180px;
+		height: 180px;
+		margin-top: 250px;
+	}
+	.clasa_like_fara{
+		position: relative;
+		box-align: center;
+		width: 300px;
+		height: 180px;
+		margin-top: 280px;
+	}
+
+	.nume_poza1{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		font-size: 25px;
+		opacity: 1;
+		/*transform: translateY(40px); */
+		/*transition: all 0.7s;	 */
+		color: white;
+	}
+	.nume_poza2{
+		position: absolute;
+		bottom: 30px;
+		left: 0;
+		font-size: 25px;
+		opacity: 1;
+		/*transform: translateY(40px); */
+		/*transition: all 0.7s;	 */
+		color: white;
+	}
+
+	
+/************************************/
+/*Contul meu */
+.modal-opac-contulmeu{
+	position: absolute;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+.modal-content-cont{	
+	top: 0;
+	width: 600px;
+	border-radius: 4px;
+	z-index: 99999;
+	opacity: 1; 
+	text-align: center;
+	padding-top: 70px;	
+	background: white;
+}
+.closecont{
+	position: absolute;
+	top: 0px;
+	right: 14px;
+	font-size: 42px;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+
+.butonmodificare{
+	width: 250px;
+	height: 80px;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 25px;
+	background: #2fce98;
+	color: white;
+	border-radius: 10px;
+	text-align: center;
+	border: solid 2px #2fce98;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	cursor: pointer;
+}
+
+.input_formular{
+	width: 50%;
+	display: block;
+	margin: 2px auto;
+	font-size: 30px;
+	font-family: 'Courier New', Courier, monospace;
+	
+}
+
+
 
 /****************************/
 /*Log In/ Sign up */

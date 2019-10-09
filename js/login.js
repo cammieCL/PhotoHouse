@@ -39,3 +39,14 @@
     document.querySelector('.modal-opac-signup').style.display = 'none';
   });
   
+  document.getElementById('contulmeubuton').addEventListener('click', 
+  function(){
+    document.querySelector('.bg-modal').style.display = 'flex';
+    document.querySelector('.modal-opac-contulmeu').style.display = 'flex'; 
+  });
+
+  document.querySelector('.closecont').addEventListener('click', 
+  function(){
+    document.querySelector('.bg-modal').style.display = 'none';
+    document.querySelector('.modal-opac-contulmeu').style.display = 'none';
+  });

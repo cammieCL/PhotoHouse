@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Culture</title>
+<title>Hottest 50</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Little Closet template">
@@ -19,6 +19,7 @@
 <body>
 
 <!-- Menu -->
+
 
 <div class="bg-modal"> </div>
 <div class = "modal-opac"> 	
@@ -68,17 +69,17 @@
 				echo("<p class = 'loginscris' style = 'font-size: 45px'> Welcome $linie[1] $linie[2] </p>");
 			}
 		?>
-		<p style = "font-size: 30px; font-family: 'Times New Roman'"> Change your password </p>
-		<form action = "schimba.php" action = "post">
-			<input type = "hidden" name = "numeutilizator" value = "<?php echo $user ?>"> <br> 
-       		<input type = "password" name = "p_veche" placeholder = "Old password" REQUIRED class = "input_formular"> <br> 
-        	<input type = "password" name = "p_noua" placeholder = "New password" REQUIRED class = "input_formular"> <br> 
-        	<input type = "password" name = "rep_noua" placeholder = "Repeat new password" REQUIRED class = "input_formular"> <br>
-        	<input class = "butonmodificare" type = "submit" name = "schimba_parola" value = "Change password">
-		</form>
+			<p style = "font-size: 30px; font-family: 'Times New Roman'"> Change your password </p>
+			<form action = "schimba.php" action = "post">
+				<input type = "hidden" name = "numeutilizator" value = "<?php echo $user ?>"> <br> 
+        <input type = "password" name = "p_veche" placeholder = "Old password" REQUIRED class = "input_formular"> <br> 
+        <input type = "password" name = "p_noua" placeholder = "New password" REQUIRED class = "input_formular"> <br> 
+        <input type = "password" name = "rep_noua" placeholder = "Repeat new password" REQUIRED class = "input_formular"> <br>
+        <input class = "butonmodificare" type = "submit" name = "schimba_parola" value = "Change password">
+    
+			</form>
 	</div>
 </div>
-
 
 <div class="menu">
 
@@ -115,10 +116,11 @@
 		</div>
 	</div>
 </div>
-  
+
 <div class="super_container">
 
 	<!-- Header -->
+
 	<?php	
 		session_start();
 		error_reporting(0);
@@ -138,8 +140,8 @@
 						<ul class="d-flex flex-row align-items-start justify-content-start">	
 							<li><a href="indexp.php">Explore</a></li>
 							<li><a href="collection.php">Collection</a> </li>
-							<li><a href="hottest.php">Hottest 50</a></li>
-							<li class="active"><a href="#">Categories</a></li>
+							<li class="active"><a href="hottest.php">Hottest 50</a></li>
+							<li><a href="#">Categories</a></li>
 							<li><a href="inspire.php">Inspire</a></li>
 						</ul>
 					</nav>
@@ -152,7 +154,7 @@
 							</form>
 						</div>
 						<!-- User -->
-						<div class="cart"><a href="#" id = "contulmeubuton"><div><img src="images/user.svg" alt=""> </div></a></div>
+						<div class="cart"><a href="#" id="contulmeubuton"><div><img src="images/user.svg" alt=""> </div></a></div>
 						<!-- Cart -->
 						<div class="cart"><a href="myphotos.php"><div><img class="svg" src="images/fotografiile_mele.png" alt=""></div></a></div>
 						<!-- Phone -->
@@ -179,8 +181,8 @@
 						<ul class="d-flex flex-row align-items-start justify-content-start">	
 							<li><a href="indexlogat.php">Explore</a></li>
 							<li><a href="collection.php">Collection</a> </li>
-							<li><a href="hottest.php">Hottest 50</a></li>
-							<li class="active"><a href="#">Categories</a></li>
+							<li class="active"><a href="hottest.php">Hottest 50</a></li>
+							<li><a href="#">Categories</a></li>
 							<li><a href="inspire.php">Inspire</a></li>
 						</ul>
 					</nav>
@@ -193,7 +195,7 @@
 							</form>
 						</div>
 						<!-- User -->
-						<div class="cart"><a href="#" id = "contulmeubuton"><div><img src="images/user.svg" alt=""> </div></a></div>
+						<div class="cart"><a href="#"  id="contulmeubuton"><div><img src="images/user.svg" alt=""> </div></a></div>
 						<!-- Phone -->
 						<div class = "cart"> <a href = "deconectare.php" id = "log_out"> <div> <img src="images/logout_buton.png" alt="https://www.flaticon.com/authors/freepik"> </div> </a> </div> 
 						<div class = "cart"> <a href = "contact.php"> <div> <img src="images/phone.svg" alt="https://www.flaticon.com/authors/freepik"> </div> </a> </div> 
@@ -218,8 +220,8 @@
 						<ul class="d-flex flex-row align-items-start justify-content-start">	
 							<li><a href="index.php">Explore</a></li>
 							<li><a href="collection.php">Collection</a> </li>
-							<li><a href="hottest.php">Hottest 50</a></li>
-							<li class="active"><a href="#">Categories</a></li>
+							<li class="active"><a href="hottest.php">Hottest 50</a></li>
+							<li><a href="#">Categories</a></li>
 							<li><a href="inspire.php">Inspire</a></li>
 						</ul>
 					</nav>
@@ -232,16 +234,16 @@
 							</form>
 						</div>
 						<div class = "d-flex flex-row align-items-center justify-content-start">
-							<div class = "main_nav">
+							<nav class = "main_nav">
 							<ul class="d-flex flex-row align-items-start justify-content-start">	
 									<li><a href="#" id = "loginbuton">Log in</a></li>
 									<li><a href="#" id = "signupbuton">Sign Up</a></li>
 								</ul>
-							</div>
+							</nav>
 						</div>
 						<!-- Phone -->
 						<div class="header_phone d-flex flex-row align-items-center justify-content-start">
-							<div><div><a href = "contact.php"> <img src="images/phone.svg"> </a> </div></div>
+							<div><div><a href = "category.html"> <img src="images/phone.svg"> </a> </div></div>
 						</div>
 					</div>
 				</div>
@@ -250,34 +252,37 @@
 		} ?>
 
 	<div class="super_container_inner">
-		<div class="super_overlay"></div>
+		<div class="super_overlay"></div> 
 
 		<!-- Home -->
 
 		<div class="home">
 			<div class="home_container d-flex flex-column align-items-center justify-content-end">
 				<div class="home_content text-center">
-					<div class="home_title">Culture</div>
+					<div class="home_title">Hottest 50</div>
 				</div>
 			</div>
 		</div>
-
+		
 		<div class = "poze">
 		<?php
 			include ("db/conectare.php");
 		 	error_reporting(0);
 			session_start();
 			$user = $_SESSION['admin'];
-			$sql = "SELECT * from produse Where categorie LIKE 'Culture' ORDER BY data_publicarii desc";
-			$numesite = "culture.php";
+			$sql = "SELECT * from produse ORDER BY nr_likes DESC";
+			$numesite = "hottest.php";
 
 			if ($r = mysqli_query($conn, $sql)) {
 				if (mysqli_num_rows($r) > 0) {
-					echo ("<table>"); $c = 1;
+					echo ("<table>"); $c = 1; $cont = 0;
 					while ($linie = mysqli_fetch_array($r)) { 
 						if ($c == 1)
-							echo("<tr>");
-						echo("<td>");
+                            echo("<tr>"); 
+                        $cont++;
+                        if ($cont == 53)
+                            break;
+                        echo("<td>");
 						$auxiliar = $linie[7];
 						$inter = "SELECT * from useri WHERE username LIKE '$auxiliar'";
 						if ($rr = mysqli_query($conn, $inter)) {
@@ -346,17 +351,19 @@
 			}
 		?>
 		</div>
-	</div>
+	</div> 
 
-		<!-- Footer -->
+</div>
 
-	<!--	<footer class="footer">
+		<!-- Footer
+<div class="staijospls">
+		<footer class="footer">
 			<div class="footer_content">
 				<div class="container">
-					<div class="row"> -->
+					<div class="row"> 
 						
 						<!-- About -->
-					<!--	<div class="col-lg-4 footer_col">
+						<!-- <div class="col-lg-4 footer_col">
 							<div class="footer_about">
 								<div class="footer_logo">
 									<a href="#">
@@ -370,10 +377,10 @@
 									<p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. Fusce venenatis vel velit vel euismod.</p>
 								</div>
 							</div>
-						</div> -->
+						</div>  -->
 
 						<!-- Footer Links -->
-					<!--	<div class="col-lg-4 footer_col">
+						<!-- <div class="col-lg-4 footer_col">
 							<div class="footer_menu">
 								<div class="footer_title">Support</div>
 								<ul class="footer_list">
@@ -394,10 +401,10 @@
 									</li>
 								</ul>
 							</div>
-						</div> -->
+						</div>  -->
 
 						<!-- Footer Contact -->
-				<!--		<div class="col-lg-4 footer_col">
+						<!-- <div class="col-lg-4 footer_col">
 							<div class="footer_contact">
 								<div class="footer_title">Stay in Touch</div>
 								<div class="newsletter">
@@ -419,8 +426,8 @@
 						</div>
 					</div>
 				</div>
-			</div> -->
-		<!--	<div class="footer_bar">
+			</div> 
+			<div class="footer_bar">
 				<div class="container">
 					<div class="row">
 						<div class="col">
@@ -441,9 +448,8 @@
 				</div>
 			</div>
 		</footer>
-	</div> -->
-		
-</div>
+	</div> 	
+</div> --> 
 
 <script>
 	document.getElementById('contulmeubuton').addEventListener('click', 
@@ -476,4 +482,4 @@
 <script src="js/category.js"></script>
 <script src="js/login.js"></script>
 </body>
-</html>
+</html> 

@@ -26,7 +26,6 @@
 			<form action = "login.php" name = "formular" method = "post">
 					<input class = "input_form" type = "text" placeholder = "Username" name = "user_login" REQUIRED>
 					<input class = "input_form" type = "password" placeholder = "Password" name = "pass_login" REQUIRED>
-					<a href = "schimba.php" class = "schimba"> Schimba parola </a> <br>
 					<input class = "butonulmeu" type = "submit" value = "Log In" name = "buton_login">
 			</form>
     </div>
@@ -114,20 +113,20 @@
 				<div>
 					<ul>
 						<li class="active"><a href="#">Explore</a></li>
-						<li><a href="collection.php">Collection</a>
-						<!--	<ul>
-								<li><a href="category.html">Travel</a></li>
-								<li><a href="category.html">People</a></li>
-								<li><a href="category.html">Tehnology</a></li>
-								<li><a href="category.html">Nature</a></li>
-								<li><a href="category.html">Fashion</a></li>
-								<li><a href="category.html">Art</a></li>
-								<li><a href="category.html">Food </a></li>
-								<li><a href="category.html">Animals </a></li>
+						<li><a href="collection.php">Collection</a></li>
+						<li><a href="hottest.php">Hottest 50</a></li>
+						<li><a href="#">Categories</a>
+							<!-- <ul class = "submeniu">
+								<li class = "subelem"><a href="travel.php">Travel</a></li>
+								<li class = "subelem"><a href="people.php">People</a></li>
+								<li class = "subelem"><a href="tehnology.php">Tehnology</a></li>
+								<li class = "subelem"><a href="nature.php">Nature</a></li>
+								<li class = "subelem"><a href="fashion.php">Fashion</a></li>
+								<li class = "subelem"><a href="art.php">Art</a></li>
+								<li class = "subelem"><a href="food.php">Food </a></li>
+								<li class = "subelem"><a href="animals.php">Animals </a></li>
 							</ul> -->
 						</li>
-						<li><a href="category.html">Photographers</a></li>
-						<li><a href="category.html">Categories</a></li>
 						<li><a href="inspire.php">Inspire</a></li>
 					</ul>
 				</div>
@@ -135,9 +134,9 @@
 			<div class="header_right d-flex flex-row align-items-center justify-content-start ml-auto">
 				<!-- Search -->
 				<div class="header_search">
-					<form action="#" id="header_search_form">
-						<input type="text" class="search_input" placeholder="Cauta fotografie" required="required">
-						<button class="header_search_button"><img src="images/search.png" alt=""></button>
+					<form action="search.php" id="header_search_form">
+						<input type="text" class="search_input" placeholder="Cauta fotografie" required="required" name = "decautat">
+						<button class="header_search_button" name = "butoncautare"><img src="images/search.png" alt=""></button>
 					</form>
 				</div>
 				<div class = "d-flex flex-row align-items-center justify-content-start">
@@ -150,7 +149,7 @@
 				</div>
 				<!-- Phone -->
 				<div class="header_phone d-flex flex-row align-items-center justify-content-start">
-					<div><div><a href = "category.html"> <img src="images/phone.svg"> </a> </div></div>
+					<div><div><a href = "contact.php"> <img src="images/phone.svg"> </a> </div></div>
 				</div>
 			</div>
 		</div>
@@ -368,8 +367,8 @@
 								<div class="product_info d-flex flex-row align-items-start justify-content-start">
 									<div>
 										<div>
-											<div class="product_name"><a href="product.html">Easter is coming</a></div>
-											<div class="product_category">In <a href="category.html">Nature</a></div>
+											<div class="product_name"><a href="nature.php">Easter is coming</a></div>
+											<div class="product_category">In <a href="nature.php">Nature</a></div>
 										</div>
 									</div>
 								</div>
@@ -385,8 +384,8 @@
 								<div class="product_info d-flex flex-row align-items-start justify-content-start">
 									<div>
 										<div>
-											<div class="product_name"><a href="product.html">Monika Grabkowska</a></div>
-											<div class="product_category">In <a href="category.html">Nature</a></div>
+											<div class="product_name"><a href="nature.php">Monika Grabkowska</a></div>
+											<div class="product_category">In <a href="nature.php">Nature</a></div>
 										</div>
 									</div>
 								</div>
@@ -402,8 +401,8 @@
 								<div class="product_info d-flex flex-row align-items-start justify-content-start">
 									<div>
 										<div>
-											<div class="product_name"><a href="product.html">Gaelle Marcel</a></div>
-											<div class="product_category">In <a href="category.html">Food</a></div>
+											<div class="product_name"><a href="food.php">Gaelle Marcel</a></div>
+											<div class="product_category">In <a href="food.php">Food</a></div>
 										</div>
 									</div>
 								</div>
@@ -419,8 +418,8 @@
 								<div class="product_info d-flex flex-row align-items-start justify-content-start">
 									<div>
 										<div>
-											<div class="product_name"><a href="product.html">Markus Spiske</a></div>
-											<div class="product_category">In <a href="category.html">Inspire</a></div>
+											<div class="product_name"><a href="tehnology.php">Markus Spiske</a></div>
+											<div class="product_category">In <a href="inspire.php">Inspire</a></div>
 										</div>
 									</div>
 								</div>
@@ -436,8 +435,8 @@
 								<div class="product_info d-flex flex-row align-items-start justify-content-start">
 									<div>
 										<div>
-											<div class="product_name"><a href="product.html">Evgeni Tcherkasski</a></div>
-											<div class="product_category">In <a href="category.html">Travel</a></div>
+											<div class="product_name"><a href="travel.php">Evgeni Tcherkasski</a></div>
+											<div class="product_category">In <a href="travel.php">Travel</a></div>
 										</div>
 									</div>
 								</div>
@@ -453,8 +452,8 @@
 								<div class="product_info d-flex flex-row align-items-start justify-content-start">
 									<div>
 										<div>
-											<div class="product_name"><a href="product.html">Kyler Boone</a></div>
-											<div class="product_category">In <a href="category.html">Travel</a></div>
+											<div class="product_name"><a href="travel.php">Kyler Boone</a></div>
+											<div class="product_category">In <a href="travel.php">Travel</a></div>
 										</div>
 									</div>
 								</div>
@@ -536,52 +535,6 @@
 			</div>
 		</div>
 
-		<!-- Features -->
-
-		<div class="features">
-			<div class="container">
-				<div class="row">
-					
-					<!-- Feature -->
-					<div class="col-lg-4 feature_col">
-						<div class="feature d-flex flex-row align-items-start justify-content-start">
-							<div class="feature_left">
-								<div class="feature_icon"><img src="images/icon_1.svg" alt=""></div>
-							</div>
-							<div class="feature_right d-flex flex-column align-items-start justify-content-center">
-								<div class="feature_title">Safe payment</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Feature -->
-					<div class="col-lg-4 feature_col">
-						<div class="feature d-flex flex-row align-items-start justify-content-start">
-							<div class="feature_left">
-								<div class="feature_icon ml-auto mr-auto"><img src="images/icon_2.svg" alt=""></div>
-							</div>
-							<div class="feature_right d-flex flex-column align-items-start justify-content-center">
-								<div class="feature_title">Shop with confidence</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Feature -->
-					<div class="col-lg-4 feature_col">
-						<div class="feature d-flex flex-row align-items-start justify-content-start">
-							<div class="feature_left">
-								<div class="feature_icon"><img src="images/icon_3.svg" alt=""></div>
-							</div>
-							<div class="feature_right d-flex flex-column align-items-start justify-content-center">
-								<div class="feature_title">Great value </div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
 		<!-- Footer -->
 
 		<footer class="footer">
@@ -654,11 +607,11 @@
 							<div class="footer_bar_content d-flex flex-md-row flex-column align-items-center justify-content-start">
 								<nav class="footer_nav ml-md-auto order-md-2 order-1">
 									<ul class="d-flex flex-row align-items-center justify-content-start">
-										<li> <a href="category.html">Terms of Use</a></li>
-										<li> <a href="category.html">Privacy Policy</a></li>
-										<li> <a href="category.html">Help</a></li>
-										<li><a href="category.html">About Us</a></li>
-										<li><a href="#">Contact</a></li>
+										<li> <a href="termsofuse.php">Terms of Use</a></li>
+										<li> <a href="privacy.php">Privacy Policy</a></li>
+										<li> <a href="help.php">Help</a></li>
+										<li><a href="aboutus.php">About Us</a></li>
+										<li><a href="contact.php">Contact</a></li>
 									</ul>
 								</nav>
 							</div>

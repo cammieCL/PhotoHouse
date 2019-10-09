@@ -36,6 +36,8 @@
         else if ($categ == "11")
             $cate = "Health";
 
+        $calesite = $cate.".php";
+
 
         if (file_exists($caleapoza_posibila)) {
             echo ("Regretam, dar un fisier cu acest nume exista deja. Alege alt nume");
@@ -53,7 +55,7 @@
                     ?> <script type = "text/javascript">
                         alert("Photo added");
                         </script> <?php
-                    header("location: indexp.php");
+                    header("location: $calesite");
                 }
                 else {
                     ?> <script type = "text/javascript">

@@ -19,13 +19,20 @@
 </head>
 <body>
 
-<!--<div class = "bg-modal"> </div>
+<?php
+	session_start();
+	//if (!$_SESSION['admin'])
+	//	header("location: index.php");
+?>
+
+<div class = "bg-modal"> </div>
 <div class = "modal-opac-signup">
 	<div class= "modal-photo">
 		<div class = "closesign"> + </div>
 		<img class = "modal-img" src = "images/logo_1.gif" alt = "Image">
 		<form action = "add.php" method = "post" enctype = "multipart/form-data">
 			<p class = "loginscris"> <b> Add a new photo </b></p> <br>
+		<!--	<p class = "input_form"> Choose a category </p> <br> -->
 			<select class="dropbtn" name = "categorie" REQUIRED>
 				<div class="dropdown-content">
 					<option class = "dropdown-element" value = "0" selected> Choose a category </option>
@@ -37,13 +44,13 @@
 					<option class = "dropdown-element" value = "6"> Arhitecture </option> 
 					<option class = "dropdown-element" value = "7"> Food </option> 
 					<option class = "dropdown-element" value = "8"> Animals </option>
-					<option class = "dropdown-element" value = "9"> Art </option>
+					<option class = "dropdown-element" value = "9"> Culture </option>
 					<option class = "dropdown-element" value = "10"> Business </option> 
-					<option class = "dropdown-element" value = "11"> Sport </option>
+					<option class = "dropdown-element" value = "11"> Health </option>
 				</div>
 			</div> </center> 
 			<input class = "input_form" type = "text" placeholder = "Photo Name" name = "nume_add" REQUIRED>
-			<input class = "input_form" type = "text" placeholder = "Price" name = "pret_add" REQUIRED>
+		<!--	<input type = "file" name = "fis"> -->
 			<label class="fileContainer">
 					Choose photo
 					<input type="file" name = "fis" REQUIRED />
@@ -51,7 +58,7 @@
 			<input class = "butonulmeu" type = "submit" value = "Add photo" name = "buton_adaugare"> 
 		</form> 
 	</div>
-</div> -->
+</div>
 <!-- Menu -->
 
 <div class="menu">
@@ -108,11 +115,11 @@
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-start justify-content-start">	
 					<li class="active"><a href="#">Explore</a></li>
-					<li><a href="#">Collection</a> </li>
-					<li><a href="category.html">Photographers</a></li>
-					<li><a href="category.html">Categories</a></li>
-					<li><a href="category.html">Inspire</a></li>
-           <li><a href="#" id = "addbuton">Add Photo</a></li>
+					<li><a href="collection.php">Collection</a> </li>
+					<li><a href="hottest.php">Hottest 50</a></li>
+					<li><a href="#">Categories</a></li>
+					<li><a href="inspire.php">Inspire</a></li>
+          			<li><a href="#" id = "addbuton">Add Photo</a></li>
 				</ul>
 			</nav>
 			<div class="header_right d-flex flex-row align-items-center justify-content-start ml-auto">
@@ -292,6 +299,20 @@
     document.querySelector('.modal-opac-signup').style.display = 'none';
   });
 </script> -->
+
+<script>
+	document.getElementById('addbuton').addEventListener('click', 
+  function(){
+    document.querySelector('.bg-modal').style.display = 'flex';
+    document.querySelector('.modal-opac-signup').style.display = 'flex';
+  });
+
+  document.querySelector('.closesign').addEventListener('click', 
+  function(){
+    document.querySelector('.bg-modal').style.display = 'none';
+    document.querySelector('.modal-opac-signup').style.display = 'none';
+  });
+</script>
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap-4.1.2/popper.js"></script>

@@ -1,11 +1,3 @@
-
-    <form name = "schimba" method = "post" action = "">
-        <input type = "text" name = "numeutilizator" placeholder = "Username" REQUIRED> <br> 
-        <input type = "password" name = "p_veche" placeholder = "Old password" REQUIRED> <br> 
-        <input type = "password" name = "p_noua" placeholder = "New password" REQUIRED> <br> 
-        <input type = "password" name = "rep_noua" placeholder = "Repeat new password" REQUIRED> <br>
-        <input type = "submit" name = "schimba_parola" value = "Change password">
-    </form>
 <?php
     if (isset($_POST["schimba_parola"])) {
         include ("db/conectare.php");
@@ -28,8 +20,7 @@
                         $pn = password_hash($pnoua, PASSWORD_DEFAULT);
                         $sql = "UPDATE useri set parola = '$pn' WHERE username = '$username'";
                         if ($r = mysqli_query($conn, $sql)) {
-                            echo ("Parola modificata cu succes");
-                            header("location: index.php");
+                            header("location: indexp.php");
                         }
                         else {
                             echo("Eroare la interogare");

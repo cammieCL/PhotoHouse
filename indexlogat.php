@@ -25,6 +25,34 @@
 	}
 ?> 
 
+
+<div class = "bg-modal"> </div>
+<div class = "modal-opac-contulmeu">
+	<div class = "modal-content-cont" style = "height: 700px">
+		<div class="closecont"> + </div>
+		<img class = "modal-img" src = "images/logo_1.gif" alt = "Image">
+		<?php
+ 			include("db/conectare.php");
+			$user = $_SESSION['admin'];
+			$sql = "SELECT * from useri WHERE username LIKE '$user'";
+			if ($rasp = mysqli_query($conn, $sql)) {
+				$linie = mysqli_fetch_array($rasp);
+				echo("<p class = 'loginscris' style = 'font-size: 45px'> Welcome $linie[1] $linie[2] </p>");
+			}
+		?>
+			<p style = "font-size: 30px; font-family: 'Times New Roman'"> Change your password </p>
+			<form action = "schimba.php" action = "post">
+				<input type = "hidden" name = "numeutilizator" value = "<?php echo $user ?>"> <br> 
+        <input type = "password" name = "p_veche" placeholder = "Old password" REQUIRED class = "input_formular"> <br> 
+        <input type = "password" name = "p_noua" placeholder = "New password" REQUIRED class = "input_formular"> <br> 
+        <input type = "password" name = "rep_noua" placeholder = "Repeat new password" REQUIRED class = "input_formular"> <br>
+        <input class = "butonmodificare" type = "submit" name = "schimba_parola" value = "Change password">
+    
+			</form>
+	</div>
+</div>
+
+
 <div class="menu">
 
 	<!-- Search -->
@@ -86,21 +114,10 @@
 			<nav class="main_nav">
 				<div>
 					<ul>
-						<li class="active"><a href="#">Explore</a></li>
-						<li><a href="collection.php">Collection</a>
-						<!--	<ul>
-								<li><a href="category.html">Travel</a></li>
-								<li><a href="category.html">People</a></li>
-								<li><a href="category.html">Tehnology</a></li>
-								<li><a href="category.html">Nature</a></li>
-								<li><a href="category.html">Fashion</a></li>
-								<li><a href="category.html">Art</a></li>
-								<li><a href="category.html">Food </a></li>
-								<li><a href="category.html">Animals </a></li>
-							</ul> -->
-						</li>
-						<li><a href="category.html">Photographers</a></li>
-						<li><a href="category.html">Categories</a></li>
+						<li class="active"><a href="indexlogat.php">Explore</a></li>
+						<li><a href="collection.php">Collection</a> </li>
+						<li><a href="hottest.php">Hottest 50</a></li>
+						<li><a href="#">Categories</a></li>
 						<li><a href="inspire.php">Inspire</a></li>
 					</ul>
 				</div>
@@ -114,17 +131,7 @@
 					</form>
 				</div>
 				<!-- User -->
-				<div class="user">
-				<!--	<a href="#"><div><img src="images/user.svg" alt="https://www.flaticon.com/authors/freepik"></div></a> -->
-					<div class="dropdown">
-						<span>
-							<a href="#"><div><img src="images/user.svg" alt="https://www.flaticon.com/authors/freepik"></div></a>
-						</span>
-						<div class="dropdown-content">
-							<p>Hello World!</p>
-						</div>
-					</div>
-				</div>
+				<div class="cart"><a href="#" id = "contulmeubuton"><div><img src="images/user.svg" alt=""> </div></a></div>
 				<!-- Cart -->
 			<!--	<div class="cart"><a href="myphotos.php"><div><img class="svg" src="images/fotografiile_mele.png" alt=""></div></a></div>	-->
 				<!-- Phone -->
@@ -463,7 +470,7 @@
 								<div class="box_content d-flex flex-row align-items-center justify-content-start">
 									<div class="box_left">
 										<div class="box_image">
-											<a href="category.html">
+											<a href="tehnology.php">
 												<div class="background_image" style="background-image:url(images/box_1_imgg.jpg)"></div>
 											</a>
 										</div>
@@ -480,7 +487,7 @@
 								<div class="box_content d-flex flex-row align-items-center justify-content-start">
 									<div class="box_left">
 										<div class="box_image">
-											<a href="category.html">
+											<a href="food.php">
 												<div class="background_image" style="background-image:url(images/box_2_imgg.jpg)"></div>
 											</a>
 										</div>
@@ -497,7 +504,7 @@
 								<div class="box_content d-flex flex-row align-items-center justify-content-start">
 									<div class="box_left">
 										<div class="box_image">
-											<a href="category.html">
+											<a href="fashion.php">
 												<div class="background_image" style="background-image:url(images/box_3_imgg.jpg)"></div>
 											</a>
 										</div>
@@ -513,53 +520,6 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- Features -->
-
-		<div class="features">
-			<div class="container">
-				<div class="row">
-					
-					<!-- Feature -->
-					<div class="col-lg-4 feature_col">
-						<div class="feature d-flex flex-row align-items-start justify-content-start">
-							<div class="feature_left">
-								<div class="feature_icon"><img src="images/icon_1.svg" alt=""></div>
-							</div>
-							<div class="feature_right d-flex flex-column align-items-start justify-content-center">
-								<div class="feature_title">Safe payment</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Feature -->
-					<div class="col-lg-4 feature_col">
-						<div class="feature d-flex flex-row align-items-start justify-content-start">
-							<div class="feature_left">
-								<div class="feature_icon ml-auto mr-auto"><img src="images/icon_2.svg" alt=""></div>
-							</div>
-							<div class="feature_right d-flex flex-column align-items-start justify-content-center">
-								<div class="feature_title">Shop with confidence</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Feature -->
-					<div class="col-lg-4 feature_col">
-						<div class="feature d-flex flex-row align-items-start justify-content-start">
-							<div class="feature_left">
-								<div class="feature_icon"><img src="images/icon_3.svg" alt=""></div>
-							</div>
-							<div class="feature_right d-flex flex-column align-items-start justify-content-center">
-								<div class="feature_title">Great value </div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
 		<!-- Footer -->
 
 		<footer class="footer">
@@ -632,11 +592,11 @@
 							<div class="footer_bar_content d-flex flex-md-row flex-column align-items-center justify-content-start">
 								<nav class="footer_nav ml-md-auto order-md-2 order-1">
 									<ul class="d-flex flex-row align-items-center justify-content-start">
-										<li> <a href="category.html">Terms of Use</a></li>
-										<li> <a href="category.html">Privacy Policy</a></li>
-										<li> <a href="category.html">Help</a></li>
-										<li><a href="category.html">About Us</a></li>
-										<li><a href="#">Contact</a></li>
+										<li> <a href="termsofuse.php">Terms of Use</a></li>
+										<li> <a href="privacy.php">Privacy Policy</a></li>
+										<li> <a href="help.php">Help</a></li>
+										<li><a href="aboutus.php">About Us</a></li>
+										<li><a href="contact.php">Contact</a></li>
 									</ul>
 								</nav>
 							</div>
@@ -648,6 +608,20 @@
 	</div>
 		
 </div>
+
+<script>
+	document.getElementById('contulmeubuton').addEventListener('click', 
+  function(){
+    document.querySelector('.bg-modal').style.display = 'flex';
+    document.querySelector('.modal-opac-contulmeu').style.display = 'flex'; 
+  });
+
+  document.querySelector('.closecont').addEventListener('click', 
+  function(){
+    document.querySelector('.bg-modal').style.display = 'none';
+    document.querySelector('.modal-opac-contulmeu').style.display = 'none';
+  });
+</script>
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap-4.1.2/popper.js"></script>

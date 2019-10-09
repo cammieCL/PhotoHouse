@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Culture</title>
+<title>Health</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Little Closet template">
@@ -20,6 +20,7 @@
 
 <!-- Menu -->
 
+
 <div class="bg-modal"> </div>
 <div class = "modal-opac"> 	
 	<div class="modal-content">	
@@ -29,6 +30,7 @@
 			<form action = "login.php" name = "formular" method = "post">
 					<input class = "input_form" type = "text" placeholder = "Username" name = "user_login" REQUIRED>
 					<input class = "input_form" type = "password" placeholder = "Password" name = "pass_login" REQUIRED>
+					<a href = "schimba.php" class = "schimba"> Schimba parola </a> <br>
 					<input class = "butonulmeu" type = "submit" value = "Log In" name = "buton_login">
 			</form>
     </div>
@@ -52,33 +54,6 @@
 		</form> 
 	</div>
 </div> 
-
-<div class = "bg-modal"> </div>
-<div class = "modal-opac-contulmeu">
-	<div class = "modal-content-cont" style = "height: 700px">
-		<div class="closecont"> + </div>
-		<img class = "modal-img" src = "images/logo_1.gif" alt = "Image">
-		<?php
-			session_start();
- 			include("db/conectare.php");
-			$user = $_SESSION['admin'];
-			$sql = "SELECT * from useri WHERE username LIKE '$user'";
-			if ($rasp = mysqli_query($conn, $sql)) {
-				$linie = mysqli_fetch_array($rasp);
-				echo("<p class = 'loginscris' style = 'font-size: 45px'> Welcome $linie[1] $linie[2] </p>");
-			}
-		?>
-		<p style = "font-size: 30px; font-family: 'Times New Roman'"> Change your password </p>
-		<form action = "schimba.php" action = "post">
-			<input type = "hidden" name = "numeutilizator" value = "<?php echo $user ?>"> <br> 
-       		<input type = "password" name = "p_veche" placeholder = "Old password" REQUIRED class = "input_formular"> <br> 
-        	<input type = "password" name = "p_noua" placeholder = "New password" REQUIRED class = "input_formular"> <br> 
-        	<input type = "password" name = "rep_noua" placeholder = "Repeat new password" REQUIRED class = "input_formular"> <br>
-        	<input class = "butonmodificare" type = "submit" name = "schimba_parola" value = "Change password">
-		</form>
-	</div>
-</div>
-
 
 <div class="menu">
 
@@ -115,10 +90,11 @@
 		</div>
 	</div>
 </div>
-  
+
 <div class="super_container">
 
 	<!-- Header -->
+
 	<?php	
 		session_start();
 		error_reporting(0);
@@ -136,10 +112,10 @@
 					<div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
 					<nav class="main_nav">
 						<ul class="d-flex flex-row align-items-start justify-content-start">	
-							<li><a href="indexp.php">Explore</a></li>
+							<li class="active"><a href="#">Explore</a></li>
 							<li><a href="collection.php">Collection</a> </li>
-							<li><a href="hottest.php">Hottest 50</a></li>
-							<li class="active"><a href="#">Categories</a></li>
+							<li><a href="category.html">Hottest 50</a></li>
+							<li><a href="category.html">Categories</a></li>
 							<li><a href="inspire.php">Inspire</a></li>
 						</ul>
 					</nav>
@@ -152,7 +128,7 @@
 							</form>
 						</div>
 						<!-- User -->
-						<div class="cart"><a href="#" id = "contulmeubuton"><div><img src="images/user.svg" alt=""> </div></a></div>
+						<div class="cart"><a href="#"><div><img src="images/user.svg" alt=""> </div></a></div>
 						<!-- Cart -->
 						<div class="cart"><a href="myphotos.php"><div><img class="svg" src="images/fotografiile_mele.png" alt=""></div></a></div>
 						<!-- Phone -->
@@ -177,10 +153,10 @@
 					<div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
 					<nav class="main_nav">
 						<ul class="d-flex flex-row align-items-start justify-content-start">	
-							<li><a href="indexlogat.php">Explore</a></li>
+							<li class="active"><a href="#">Explore</a></li>
 							<li><a href="collection.php">Collection</a> </li>
 							<li><a href="hottest.php">Hottest 50</a></li>
-							<li class="active"><a href="#">Categories</a></li>
+							<li><a href="category.html">Categories</a></li>
 							<li><a href="inspire.php">Inspire</a></li>
 						</ul>
 					</nav>
@@ -193,7 +169,7 @@
 							</form>
 						</div>
 						<!-- User -->
-						<div class="cart"><a href="#" id = "contulmeubuton"><div><img src="images/user.svg" alt=""> </div></a></div>
+						<div class="cart"><a href="#"><div><img src="images/user.svg" alt=""> </div></a></div>
 						<!-- Phone -->
 						<div class = "cart"> <a href = "deconectare.php" id = "log_out"> <div> <img src="images/logout_buton.png" alt="https://www.flaticon.com/authors/freepik"> </div> </a> </div> 
 						<div class = "cart"> <a href = "contact.php"> <div> <img src="images/phone.svg" alt="https://www.flaticon.com/authors/freepik"> </div> </a> </div> 
@@ -216,10 +192,10 @@
 					<div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
 					<nav class="main_nav">
 						<ul class="d-flex flex-row align-items-start justify-content-start">	
-							<li><a href="index.php">Explore</a></li>
+							<li class="active"><a href="#">Explore</a></li>
 							<li><a href="collection.php">Collection</a> </li>
 							<li><a href="hottest.php">Hottest 50</a></li>
-							<li class="active"><a href="#">Categories</a></li>
+							<li><a href="category.html">Categories</a></li>
 							<li><a href="inspire.php">Inspire</a></li>
 						</ul>
 					</nav>
@@ -232,16 +208,16 @@
 							</form>
 						</div>
 						<div class = "d-flex flex-row align-items-center justify-content-start">
-							<div class = "main_nav">
+							<nav class = "main_nav">
 							<ul class="d-flex flex-row align-items-start justify-content-start">	
 									<li><a href="#" id = "loginbuton">Log in</a></li>
 									<li><a href="#" id = "signupbuton">Sign Up</a></li>
 								</ul>
-							</div>
+							</nav>
 						</div>
 						<!-- Phone -->
 						<div class="header_phone d-flex flex-row align-items-center justify-content-start">
-							<div><div><a href = "contact.php"> <img src="images/phone.svg"> </a> </div></div>
+							<div><div><a href = "category.html"> <img src="images/phone.svg"> </a> </div></div>
 						</div>
 					</div>
 				</div>
@@ -250,26 +226,43 @@
 		} ?>
 
 	<div class="super_container_inner">
-		<div class="super_overlay"></div>
+		<div class="super_overlay"></div> 
 
 		<!-- Home -->
 
 		<div class="home">
 			<div class="home_container d-flex flex-column align-items-center justify-content-end">
 				<div class="home_content text-center">
-					<div class="home_title">Culture</div>
+					<div class="home_title">Health</div>
 				</div>
 			</div>
 		</div>
-
+		
 		<div class = "poze">
 		<?php
+            <?php
+            include("db/conectare.php");
+            session_start();
+            if (isset($_POST["butoncautare"])) {
+                $text = $_POST["decautat"];
+                $text = trim($text);
+        
+                $sql = "SELECT * from produse WHERE denumire LIKE '$text' OR categorie LIKE '$text')";
+        
+                if ($r = mysqli_query($conn, $sql)) {
+                    if (mysqli_num_rows($r)) {
+                        while ($linie = mysqli_fetch_array($r)) {
+        
+                        }
+                    }
+                }
+        ?>
 			include ("db/conectare.php");
 		 	error_reporting(0);
 			session_start();
 			$user = $_SESSION['admin'];
-			$sql = "SELECT * from produse Where categorie LIKE 'Culture' ORDER BY data_publicarii desc";
-			$numesite = "culture.php";
+			$sql = "SELECT * from produse Where categorie LIKE 'Health' ORDER BY data_publicarii desc";
+			$numesite = "health.php";
 
 			if ($r = mysqli_query($conn, $sql)) {
 				if (mysqli_num_rows($r) > 0) {
@@ -346,17 +339,19 @@
 			}
 		?>
 		</div>
-	</div>
+	</div> 
 
-		<!-- Footer -->
+</div>
 
-	<!--	<footer class="footer">
+		<!-- Footer
+<div class="staijospls">
+		<footer class="footer">
 			<div class="footer_content">
 				<div class="container">
-					<div class="row"> -->
+					<div class="row"> 
 						
 						<!-- About -->
-					<!--	<div class="col-lg-4 footer_col">
+						<!-- <div class="col-lg-4 footer_col">
 							<div class="footer_about">
 								<div class="footer_logo">
 									<a href="#">
@@ -370,10 +365,10 @@
 									<p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. Fusce venenatis vel velit vel euismod.</p>
 								</div>
 							</div>
-						</div> -->
+						</div>  -->
 
 						<!-- Footer Links -->
-					<!--	<div class="col-lg-4 footer_col">
+						<!-- <div class="col-lg-4 footer_col">
 							<div class="footer_menu">
 								<div class="footer_title">Support</div>
 								<ul class="footer_list">
@@ -394,10 +389,10 @@
 									</li>
 								</ul>
 							</div>
-						</div> -->
+						</div>  -->
 
 						<!-- Footer Contact -->
-				<!--		<div class="col-lg-4 footer_col">
+						<!-- <div class="col-lg-4 footer_col">
 							<div class="footer_contact">
 								<div class="footer_title">Stay in Touch</div>
 								<div class="newsletter">
@@ -419,8 +414,8 @@
 						</div>
 					</div>
 				</div>
-			</div> -->
-		<!--	<div class="footer_bar">
+			</div> 
+			<div class="footer_bar">
 				<div class="container">
 					<div class="row">
 						<div class="col">
@@ -441,23 +436,8 @@
 				</div>
 			</div>
 		</footer>
-	</div> -->
-		
-</div>
-
-<script>
-	document.getElementById('contulmeubuton').addEventListener('click', 
-  function(){
-    document.querySelector('.bg-modal').style.display = 'flex';
-    document.querySelector('.modal-opac-contulmeu').style.display = 'flex'; 
-  });
-
-  document.querySelector('.closecont').addEventListener('click', 
-  function(){
-    document.querySelector('.bg-modal').style.display = 'none';
-    document.querySelector('.modal-opac-contulmeu').style.display = 'none';
-  });
-</script>
+	</div> 	
+</div> --> 
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap-4.1.2/popper.js"></script>
@@ -476,4 +456,4 @@
 <script src="js/category.js"></script>
 <script src="js/login.js"></script>
 </body>
-</html>
+</html> 
